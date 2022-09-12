@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        navigationView=findViewById(R.id.my_drawer_layout);
+        navigationView=findViewById(R.id.navigationView);
         // drawer layout instance to toggle the menu icon to open
         // drawer and back button to close drawer
         drawerLayout = findViewById(R.id.my_drawer_layout);
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_account:
                         Toast.makeText(getApplicationContext(), "Retur is Clicked", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(MainActivity.this, BookActivity.class);
+                        /*Intent intent = new Intent(MainActivity.this,this);
                         startActivity(intent);
                         //drawerLayout.closeDrawer(GravityCompat.START);
                         break;
@@ -81,12 +81,12 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_chrome_reader:
                         Toast.makeText(getApplicationContext(), "Chrome Reader is clicked", Toast.LENGTH_LONG).show();
                         drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
+                        break;*/
                 }
 
                 return true;
             }
-        }
+        });
     }
 
     // override the onOptionsItemSelected()
