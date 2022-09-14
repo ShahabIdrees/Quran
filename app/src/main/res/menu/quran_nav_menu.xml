@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="HardcodedText">
 
-    <item
-        android:id="@+id/nav_account"
-        android:title="My Account" />
-
-    <item
-        android:id="@+id/nav_settings"
-        android:title="Settings" />
-
-    <item
-        android:id="@+id/nav_logout"
-        android:title="Logout"
-        android:visibility="visible" />
+    <group android:visible="true">
+        <item
+            android:id="@+id/nav_Surah"
+            android:title="By Surah  "
+            android:visibility="visible" />
+        <item
+            android:id="@+id/nav_account"
+            android:title="By Ayah" />
+    </group>
+    <group
+        android:id="@+id/Urdu_Translation"
+        android:visible="true">
+        <item
+            android:id="@+id/Fateh_translation"
+            android:title="Fateh Muhammad Jalandhari" />
+        <item
+            android:id="@+id/Mehmood_Translation"
+            android:title="Mehmood ul Hassan" />
+    </group>
+    <group
+        android:menuCategory="container"
+        android:visible="true">
+        <item
+            android:id="@+id/Mohsin_Translation"
+            android:title="Dr. Mohsin Khan" />
+        <item
+            android:id="@+id/Taqi_translation"
+            android:title="Mufti Taqi Usmani" />
+    </group>
 
 </menu>

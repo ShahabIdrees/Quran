@@ -13,9 +13,78 @@
     tools:ignore="HardcodedText">
 
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintlayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:background="@drawable/bg1"
+        android:hapticFeedbackEnabled="false">
+
+        <Button
+            android:id="@+id/surah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            android:width="120dp"
+            android:height="80dp"
+            android:backgroundTint="#0B2A77"
+            android:text="Surah Index"
+            android:textColor="@color/white"
+            app:cornerRadius="65dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ayah"
+            app:layout_constraintEnd_toStartOf="@+id/ayah"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ayah" />
+
+        <Button
+            android:id="@+id/gotobtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="28dp"
+            android:width="120dp"
+            android:height="80dp"
+            android:backgroundTint="#0B2A77"
+            android:text="Goto Page"
+            android:textColor="@color/white"
+            app:cornerRadius="65dp"
+            app:layout_constraintEnd_toStartOf="@+id/button14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/surah" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="5dp"
+            android:width="120dp"
+            android:height="80dp"
+            android:backgroundTint="#0B2A77"
+            android:text="Button"
+            android:textColor="@color/white"
+            app:cornerRadius="65dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gotobtn"
+            app:layout_constraintTop_toBottomOf="@+id/ayah" />
+
+        <Button
+            android:id="@+id/ayah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="183dp"
+            android:width="120dp"
+            android:height="80dp"
+            android:backgroundTint="#0B2A77"
+            android:text="Ayah Index"
+            app:cornerRadius="65dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/surah"
+            android:textColor="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- this the navigation view which draws and shows the navigation drawer -->
     <!-- include the menu created in the menu folder -->

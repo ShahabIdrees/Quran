@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
             drawerLayout.closeDrawer(GravityCompat.START);
             Toast.makeText(getApplicationContext(),"Start",Toast.LENGTH_LONG).show();
-
         }
         else
         {
