@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import java.util.ArrayList;
+
 public class SurahActivity extends AppCompatActivity {
+    public ArrayList<SurahModel> surahList = new ArrayList<SurahModel>();
     public String[] englishSurahNames = {"Al-Fatihah",
             "Al-Baqara ",
             "Al-i'Imran ",
@@ -240,5 +243,8 @@ public class SurahActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_surah);
+        for (int i = 0; i < englishSurahNames.length; i++){
+            surahList.add(new SurahModel(i+1,englishSurahNames[i], urduSurahNames[i]));
+        }
     }
 }
