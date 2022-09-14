@@ -1,6 +1,8 @@
 package com.example.quran;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
@@ -246,5 +248,10 @@ public class SurahActivity extends AppCompatActivity {
         for (int i = 0; i < englishSurahNames.length; i++){
             surahList.add(new SurahModel(i+1,englishSurahNames[i], urduSurahNames[i]));
         }
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(SurahActivity.this);
+        recyclerView.setLayoutManager(layoutManager);
+        RecyclerView.Adapter adapter = new Surah_RecyclerView_Adaptor(surahList) ;
+        recyclerView.setAdapter(adapter);
     }
 }
